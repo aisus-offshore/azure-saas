@@ -158,7 +158,7 @@ function populate-configuration-manifest() {
     long_solution_name="${solution_prefix}-${solution_name}-${postfix}"
 
     # getting public ip address for user, for use in database firewall rules
-    dev_machine_ip="$(dig +short myip.opendns.com @resolver1.opendns.com)" ||
+    dev_machine_ip="$(dig +short myipv4.p1.opendns.com)" ||
         echo "Unable to determine your public IP address." |
         log-output \
             --level error \
